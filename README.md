@@ -170,6 +170,6 @@ Copyright 2015 Francis Meyvis.
 [Licensed](LICENSE) for use under the terms of the [MIT license][mit-license].
 
 
-[project]: https://github.com/aptly-io/grav-plugin-groupmenu
-[issues]: https://github.com/aptly-io/grav-plugin-groupmenu/issues "GitHub Issues for Grav GroupMenu Plugin"
+[project]: https://github.com/aptly-io/grav-plugin-groupwidget
+[issues]: https://github.com/aptly-io/grav-plugin-groupwidget/issues "GitHub Issues for Grav GroupWidget Plugin"
 [mit-license]: http://www.opensource.org/licenses/mit-license.php "MIT license"
