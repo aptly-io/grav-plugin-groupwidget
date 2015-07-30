@@ -1,0 +1,27 @@
+name: GroupWidget
+version: 0.1.0
+description: The **GroupWidget** plugin builds a navigation widget which groups all content with matching taxonomy value(s) as the current page.
+icon: list-alt
+author:
+  name: Francis Meyvis
+  email: https://aptly.io/contact
+  url: https://aptly.io
+homepage: https://github.com/aptly-io/grav-plugin-groupmenu
+demo: https://aptly.io/about/hiking
+keywords: taxonomy
+bugs: https://github.com/aptly-io/grav-plugin-groupmenu/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin activation
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool

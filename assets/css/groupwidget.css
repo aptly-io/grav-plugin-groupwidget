@@ -1,0 +1,45 @@
+/* Copyright 2015 Francis Meyvis*/
+
+/** Part of the Grav GroupWidget plugin*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown li {
+    float: left;              /* have topmost li items next to each other*/
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+    margin-top: 0;            /* have drop down right below button*/
+    list-style: none;         /* Remove list bullets */
+    padding: 0;
+    box-shadow: 0 0.05rem 1rem rgba(0,0,0, 0.15) !important; /* Draw a shady border a la antimatter*/
+    z-index: 2;               /* Prevent collapsing submenu when hovering over elements*/
+    opacity: 1;               /* No transparency*/
+    background-color: #FFF;
+}
+
+.dropdown-menu li {
+    float: none;              /* Have the drop down li items below each other*/
+    position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown a {
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    text-decoration: none;
+}
+
+.dropdown li .active {
+    background: #1bb3e9;      /* Highlight the active page*/
+    color: #EED3D7;
+}

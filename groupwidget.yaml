@@ -1,0 +1,5 @@
+enabled: true
+built_in_css: true
+controls: [ first, last, prev, next, label, menu]
+filters:
+    category: group

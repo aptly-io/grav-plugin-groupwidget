@@ -1,0 +1,87 @@
+{# Copyright 2015 Francis Meyvis #}
+
+{## Render the group widget's navigation controls#}
+
+{#% if groupwidget.enabled %#}
+
+    {% if groupwidget.group|length > 0 %}
+
+        <div class="dropdown">
+
+            {% if 'first' in groupwidget.controls %}
+                <li>
+                    {% if groupwidget.first %}
+                        <a href="{{ groupwidget.first.url() }}" title="{{ groupwidget.first.title() }}">
+                    {% else %}
+                        <a>
+                    {% endif %}
+                            <i class="fa fa-angle-double-left"></i>
+                        </a>
+                </li>
+            {% endif %}
+
+            {% if 'prev' in groupwidget.controls %}
+                <li>
+                    {% if groupwidget.prev %}
+                        <a href="{{ groupwidget.prev.url() }}" title="{{ groupwidget.prev.title() }}">
+                    {% else %}
+                        <a>
+                    {% endif %}
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                </li>
+            {% endif %}
+
+            {% if 'label' in groupwidget.controls or 'menu' in groupwidget.controls %}
+                <li>
+
+                    <a>{{ groupwidget.current.title }}
+                        {% if 'menu' in groupwidget.controls %} <i class="fa fa-caret-down"></i>{% endif %}
+                    </a>
+
+                    {% if 'menu' in groupwidget.controls %}
+                        <ul class="dropdown-menu">
+                            {% for p in groupwidget.group %}
+                                    <li>
+                                    {% if p.url() == groupwidget.current.url() %}
+                                        <a class="active">
+                                    {% else %}
+                                        <a href="{{ p.url() }}">
+                                    {% endif %}
+                                            {{ p.title }}
+                                        </a>
+                                    </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endif %}
+
+            {% if 'next' in groupwidget.controls %}
+                <li>
+                    {% if groupwidget.next %}
+                        <a href="{{ groupwidget.next.url() }}" title="{{ groupwidget.next.title() }}">
+                    {% else %}
+                        <a>
+                    {% endif %}
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                </li>
+            {% endif %}
+
+            {% if 'last' in groupwidget.controls %}
+                <li>
+                    {% if groupwidget.last %}
+                        <a href="{{ groupwidget.last.url() }}" title="{{ groupwidget.last.title() }}">
+                    {% else %}
+                        <a>
+                    {% endif %}
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                </li>
+            {% endif %}
+
+        </div>
+    {% endif %}
+
+{#% endif %#}

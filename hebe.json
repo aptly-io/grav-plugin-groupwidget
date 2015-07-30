@@ -1,0 +1,15 @@
+{
+  "project":"grav-plugin-groupwidget",
+  "platforms":{
+    "grav":{
+      "nodes":{
+        "plugin":[
+          {
+            "source":"/",
+            "destination":"/user/plugins/groupwidget"
+          }
+        ]
+      }
+    }
+  }
+}
